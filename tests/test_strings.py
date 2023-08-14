@@ -13,5 +13,6 @@ def test_count_vowels(attr):
 @skip_if_file_missing(f"{PN}.strings", attr_name="is_palindrome")
 def test_is_palindrome(attr):
     assert attr("") == False
+    assert attr("!!!!!") == False
     assert attr("Ope, hikkaako kaakkihepo?!") == True
     assert attr("Ei hikkaa!") == False
