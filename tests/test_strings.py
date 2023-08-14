@@ -14,5 +14,6 @@ def test_count_vowels(attr):
 def test_is_palindrome(attr):
     assert attr("") == False
     assert attr("!!!!!") == False
+    assert attr("ÖäÖ") == True
     assert attr("Ope, hikkaako kaakkihepo?!") == True
     assert attr("Ei hikkaa!") == False

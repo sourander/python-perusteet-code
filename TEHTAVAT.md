@@ -37,3 +37,4 @@ Luo aiemman tehtävän kanssa samaan moduuliin, `tasks.strings`, moduuli `is_pal
 1. Isot ja pienet kirjaimet tulee nähdä keskenään samoina.
 2. Erikoismerkkejä (ei-aakkosia) ei tule ottaa huomioon.
 3. Merkkijonossa pitää olla 2 tai enemmän kirjainta.
+4. Funktion ei tarvitse ottaa kantaa siihen, ovatko sanat oikeita sanoja.
