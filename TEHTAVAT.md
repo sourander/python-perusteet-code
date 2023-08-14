@@ -4,7 +4,7 @@ Tehtävät on jaettu aihealuettain otsikoiden alle. Tehtävät on pyritty järje
 
 # Osio 0: Esitehtävä
 
-## Tehtävä 0.1: harjoitukset.helloworld
+## Tehtävä 0.1: tasks.helloworld
 
 Ensimmäinen tehtävä ei varsinaisesti ole tehtävä laisinkaan, vaan sait valmiiksi sen seuraamalla `README.md`-tiedoston ohjeita. Tehtävästä voi kuitenkin ottaa mallia seuraaviin tehtäviin. Kuvitteellinen tehtävänanto olisi:
 
@@ -26,6 +26,14 @@ FAILED tests/test_mypy.py::test_mypy - AssertionError: vastaukset\strings.py:2: 
 
 # Osio 1: Merkkijonot
 
-## Tehtävä 1.1: Vokaalit
+## Tehtävä 1.1: tasks.strings:count_vowels
 
-Luo moduuli `harjoitukset.merkkijonot`. Kirjoita moduuliin funktio `count_vowels`, joka laskee kaikki **suomen kielen vokaalit** merkkijonosta `s`, joka funktioon syötetään. Funktion tulee palauttaa kokonaisluku.
+Luo moduuli `tasks.strings`. Kirjoita moduuliin funktio `count_vowels`, joka laskee kaikki **suomen kielen vokaalit** merkkijonosta, joka funktioon parametrinä. Funktion tulee palauttaa kokonaisluku. Funktiotan parametrit ovat ne suluissa olevat muuttujat funktiomääritelmässä. Funktiota kutsutaan siis näin: `count_vowels("Jotain kirjaimia")`.
+
+## Tehtävä 1.2: tasks.strings:is_palindrome
+
+Luo aiemman tehtävän kanssa samaan moduuliin, `tasks.strings`, moduuli `is_palindrome`. Funktio palauttaa Boolen muuttujan (True | False), joka indikoi, onko parametri suomen kielessä palindromi vai ei. Joitakin sääntöjä:
+
+1. Isot ja pienet kirjaimet tulee nähdä keskenään samoina.
+2. Erikoismerkkejä (ei-aakkosia) ei tule ottaa huomioon.
+3. Merkkijonossa pitää olla 2 tai enemmän kirjainta.
