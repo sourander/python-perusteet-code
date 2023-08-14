@@ -1,0 +1,15 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+.mypy_cache/
+.pytest_cache/
+
+# Environments
+.env
+.venv
+env/
+venv/
+
+# Correct answers to all exercises ':D
+vastaukset/
