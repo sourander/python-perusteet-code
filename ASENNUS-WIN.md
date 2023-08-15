@@ -34,7 +34,6 @@ $ python -m venv .venv
 (.venv) $ 
 
 # Jatkossa python executable löytyy lähimmillään tuosta alikansiosta
-$ where python
 $ py -0p
 >>  *             %cd%\.venv\Scripts\python.exe
 >> -V:3.11        %localappdata%\Programs\Python\Python311\python.exe

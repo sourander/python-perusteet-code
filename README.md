@@ -1,10 +1,12 @@
 # Python Perusteet
 
-Katso tehtävänannot täältä: **TODO**
+Katso tehtävänannot täältä: [TEHTAVAT.md](TEHTAVAT.md)
+
+Tarvitset tehtävien tekoon Pythonin, Pip:n ja `requirements.txt`-tiedoston määrittelevät kirjastot. Pythonin asennusohje siirretään myöhemmin muualle. Väliaikainen säilö on: [ASENNUS-WIN.md](ASENNUS-WIN.md)
 
 # Tehtävien testaaminen
 
-Tämän kurssin tehtävät voi sekä tehdä että tarkistaa itse. Tehtävät tarkistetaan Pythonin `pytest`-kirjastolla.
+Tämän kurssin tehtävät voi tarkistaa itse. Tehtävät tarkistetaan Pythonin `pytest`-kirjastolla.
 
 ## Testaa yksi
 
@@ -21,13 +23,13 @@ $ pytest tests/test_helloworld.py::test_hello_world --verbose
 >> ==================== 1 passed in 0.01s ====================
 ```
 
-Testi ajoi testifunktion (eng. test function) yhden testitiedoston (eng. test file) sisällä. Mikäli yllä oleva komento palautti onnistuneen testiajon, ympäristösi toimii ja olet valmis aloittamaan tehtävät.
+Yllä ajettu testi ajoi testifunktion (eng. test function nimeltään `test_hello_world`) yhden testitiedoston (eng. test file nimeltään `tests/test_helloworld.py`) sisällä. Mikäli yllä oleva komento palautti onnistuneen testiajon, ympäristösi toimii ja olet valmis aloittamaan tehtävät.
 
-## Tehtävien teko ja testaus
+## Testaa kaikki tehdyt
 
-1. Lue yhden tehtävän tehtävänanto huolella
-2. Toteuta koodi `tasks`-hakemiston alle. Tarkista tiedostonimet kahdesti.
-3. Aja testi.
+1. Lue seuraavan tehtävänanto huolella
+2. Toteuta koodi `tasks`-hakemiston alle määrättyyn tiedostoon.
+3. Aja testit: `pytest`.
 4. Muokkaa koodia kunnes kyseinen tehtävä on **PASSED** (vastakohta on **FAILED**, aloittamaton on **SKIPPED**).
 5. Tallenna ja lisää versionhallintaan.
 6. Siirry seuraavaan tehtävään.
@@ -43,7 +45,7 @@ Mikäli haluat hieman tiiviimmän tulosteen, kokeile ajaa skripti quiet-parametr
 
 # Tehtävän palauttaminen
 
-Kun kaikki testit menevät läpi, on aika palauttaa tehtävä. Luo `pytest`:stä raportti. Tarvitset sitä varten pluginin `pytest-html`. 
+Kun kaikki testit menevät läpi (eli `pytest` palauttaa kaikista tehtävistä **PASSED**), on aika palauttaa tehtävä. Luo `pytest`:stä raportti. Tarvitset sitä varten pluginin `pytest-html`. 
 
 1. Asenna ja aja pytest alla olevalla `--html` parametrillä.
 2. Lisää tiedosto versionhallintaan.
