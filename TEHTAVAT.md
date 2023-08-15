@@ -2,6 +2,28 @@
 
 Tehtävät on jaettu aihealuettain otsikoiden alle. Tehtävät on pyritty järjestämään vaikeusjärjestykseen, joten voit tehdä ne järjestyksessä alusta loppuun.
 
+
+
+## Muuttajatyyppien vihjaus
+
+Funktio voi olla tunnukseltaan (eng. signature) esimerkiksi `do_it(a: str) -> int`: sisään menee merkkijono, takaisin palautuu kokonaisluku. Esimerkin funktion nimi on `do_it`, se ottaa sisään yhden argumentin (`a`), ja palauttaa kokonaisluvun). Vihjeiden lisääminen funktioon määritykseen ei ole pakollista, mutta se parantaa luettavuutta.
+
+Käytännössä saman funktion voi toteuttaa kummalla tahansa tavalla alla olevasta tavasta:
+
+```python
+# Tapa 1: Ei vihjeitä muuttujatyypeistä
+def do_it(a):
+    return len(a)
+
+# Tapa 2: Vihje sekä parametrin että palautuksen tyypistä
+def do_it(a:str) -> int:
+    return len(a)
+```
+
+Huomaa, että **tämän kurssin tehtävissä oletetaan**, että lisäät tyyppivihjeet (eng. type hints) aivan jokaiseen funktioon. Tyyppivihjeiden käyttö vaatii Python 3.5 tai uudemman.
+
+
+
 # Osio 0: Esitehtävä
 
 ## Tehtävä 0.1: tasks.helloworld
@@ -12,7 +34,7 @@ Ensimmäinen tehtävä ei varsinaisesti ole tehtävä laisinkaan. Tehtävä on t
 
 Vastaus on tehty jo valmiiksi, joten älä muokkaa sitä. Moduuli on tiedostossa `harjoitukset/helloworld.py`. Tiedoston sisältö on:
 ```python
-def hello_world():
+def hello_world() -> str:
     return "Hello World!"
 ```
 
@@ -30,13 +52,24 @@ FAILED tests/test_mypy.py::test_mypy - AssertionError: vastaukset\strings.py:2: 
 
 # Osio 1: Merkkijonot
 
-## Tehtävä 1.1: tasks.strings:count_vowels
+Tämän osion funktioita yhdistää se, että ne kaikki vaativat argumentteina vain ja ainoastaan merkkijonoja. Palautuvan arvon tyyppi riippuu tehtävästä.
 
-Luo moduuli `tasks.strings`. Kirjoita moduuliin funktio `count_vowels`, joka laskee kaikki **suomen kielen vokaalit** merkkijonosta, joka funktioon parametrinä. Funktion tulee palauttaa kokonaisluku. Funktiotan parametrit ovat ne suluissa olevat muuttujat funktiomääritelmässä. Funktiota kutsutaan siis näin: `count_vowels("Jotain kirjaimia")`.
 
-## Tehtävä 1.2: tasks.strings:is_palindrome
+## Tehtävä 1.1: tasks.strings:generate_zip_name
 
-Luo aiemman tehtävän kanssa samaan moduuliin, `tasks.strings`, moduuli `is_palindrome`. Funktio palauttaa Boolen muuttujan (True | False), joka indikoi, onko parametri suomen kielessä palindromi vai ei. Joitakin sääntöjä:
+Luo moduuli `tasks.strings`. Tee moduulin sisälle funktio `generate_zip_name`, joka ottaa sisään neljä parametriä: applikaation nimen, version, prosessoriarkkitehtuurin sekä tiedostopäätteen. Jos kutsu on `generate_zip_name("myApp", "1.0", "x86_64", "zip")` niin takaisin tulee palautua merkkijono `"myApp-1.0-x86_64.zip"`
+
+## Tehtävä 1.2: tasks.strings:is_a_in_b
+
+Luo aiemman tehtävän kanssa samaan moduuliin, `tasks.strings`, funktio. Funktion nimi on `is_a_in_b` ja sen parametrit ovat kaksi merkkijonoa. Funktio palauttaa Boolen muuttujan (True tai False), joka indikoi, löytyykö merkkijono a merkkijonon b sisältä. Funktion tulee käsitellä pieniä ja suuria kirjaimia keskenään samoina. Esimerkiksi kutsu `is_a_in_b("kissa", "Lemmikkini nimi on Kissa.")` palauttaa True. Myös `is_a_in_b("from taulu", "SELECT * FROM TAULU")` palauttaa True.
+
+## Tehtävä 1.2: tasks.strings:count_vowels
+
+Käytä yhä samaa moduulia `tasks.strings`. Luo funktio `count_vowels`, joka laskee kaikki **suomen kielen vokaalit** merkkijonosta, joka syötetään funktioon parametrina. Funktion tulee palauttaa kokonaisluku.
+
+## Tehtävä 1.3: tasks.strings:is_palindrome
+
+Käytä yhä samaa moduulia `tasks.strings`. Luo moduuli `is_palindrome`. Funktio palauttaa Boolen muuttujan (True | False), joka indikoi, onko sille syötetty parametri suomen kielessä palindromi vai ei. Joitakin sääntöjä:
 
 1. Isot ja pienet kirjaimet tulee nähdä keskenään samoina.
 2. Erikoismerkkejä (ei-aakkosia) ei tule ottaa huomioon.

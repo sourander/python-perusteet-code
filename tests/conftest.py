@@ -5,6 +5,7 @@ import os
 from typing import Optional
 from pathlib import Path
 from dataclasses import dataclass, field
+from typing import Callable
 
 # Static, to be used in all tests
 PACKAGE_NAME = os.getenv("PACKAGE_NAME") or "tasks"
@@ -68,3 +69,7 @@ def skip_if_file_missing(
         return wrapper
 
     return decorator
+
+
+def count_type_hints(f:Callable) -> int:
+    return len(f.__annotations__.keys())
