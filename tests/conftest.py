@@ -2,9 +2,7 @@ import pytest
 import importlib.util
 import os
 
-from typing import Optional
-from pathlib import Path
-from dataclasses import dataclass, field
+from dataclasses import dataclass
 from typing import Callable
 
 # Static, to be used in all tests
@@ -61,7 +59,7 @@ def skip_if_file_missing(
             except AttributeError:
                 pytest.skip(
                     f"Skipping {test_func.__name__} because "
-                    f"function '{attr_name} not found'"
+                    f"attribute '{attr_name}' not found'"
                 )
 
             return test_func(func, *args, **kwargs)
