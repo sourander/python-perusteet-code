@@ -4,11 +4,13 @@ Katso tehtävänannot täältä: [TEHTAVAT.md](TEHTAVAT.md)
 
 Tarvitset tehtävien tekoon Pythonin, Pip:n ja `requirements.txt`-tiedoston määrittelevät kirjastot. Pythonin asennusohje siirretään myöhemmin muualle. Väliaikainen säilö on: [ASENNUS-WIN.md](ASENNUS-WIN.md)
 
-# Tehtävien testaaminen
+**HUOM:** Tämän ohjeen hakemistopolut ovat relatiivisia tämän projektin juureen nähden (eli siihen kansioon, jossa juuri tämä `README.md`-tiedosto sijaitsee.) Hakemistopolut on kirjoitettu POSIX-polkuja käyttäen, joten tiedostopolun hakemistojen välisenä erottimena käytetään kauttaviivaa (eng. slash, `/`). Mikäli käytät Windowsia, korvaa ne kenoviivalla (eng. backslash, `\`).
 
-Tämän kurssin tehtävät voi tarkistaa itse. Tehtävät tarkistetaan Pythonin `pytest`-kirjastolla.
+# Ennen kuin aloitat
 
-## Testaa yksi
+Tämän kurssin tehtävät voi tarkistaa itse. Tehtävät tarkistetaan Pythonin `pytest`-kirjastolla. Varmista ensin, että `pytest` toimii oletetulla tavalla. Kurssin ensimmäinen tehtävä, Hello World, on tehty jo valmiiksi. Testaa se alla olevalla koodilla.
+
+## Testaa Hello World
 
 ```sh
 # Aja tämä komento
@@ -23,7 +25,18 @@ $ pytest tests/test_helloworld.py::test_hello_world --verbose
 >> ==================== 1 passed in 0.01s ====================
 ```
 
-Yllä ajettu testi ajoi testifunktion (eng. test function nimeltään `test_hello_world`) yhden testitiedoston (eng. test file nimeltään `tests/test_helloworld.py`) sisällä. Mikäli yllä oleva komento palautti onnistuneen testiajon, ympäristösi toimii ja olet valmis aloittamaan tehtävät.
+Yllä ajettu testi ajoi testifunktion (eng. test function nimeltään `test_hello_world`) yhden testitiedoston (eng. test file nimeltään `tests/test_helloworld.py`) sisällä. Mikäli yllä oleva komento palautti onnistuneen testiajon, ympäristösi toimii ja olet valmis aloittamaan tehtävät. Mikäli saat virheilmoituksen `'pytest' is not recognized as an internal or external command, operable program or batch file.` tai `pytest: command not found`, et ole joko asentanut pytestiä ohjeiden mukaisesti, tai sinulla ei ole virtuaaliympäristö aktivoituna.
+
+## Tehtävän tekeminen
+
+1. Tehtävät on tarkoituksella aloittajalle haastavia; lue Pythonin dokumentaatiota kun teet tehtäviä, kysy neuvoa muilta, yritä ja erehdy. 
+2. Tehtävät voi tehdä millä tahansa tekstieditorilla, mutta suosittelen Visual Studio Codea.
+3. Aja kaikki tehtävät projektin juuresta eli siis kansiosta `$jotain/python-perusteet-code/`. Komentoriviesimerkki koodin ajamiseen on: `python tasks/helloworld.py`
+
+> Vinkki: mikäli haluat ajaa koodin siten, että siitä jää interaktiivinen sessio käyntiin koodin suorittamisen jälkeen, lisää parametri -i, eli `python -i <polku-tiedostoon>`. Interaktiivinen sessio sulkeutuu komennolla `quit()`.
+
+**VSCODE-VINKKI!** Visual Studio Coden koodieditorin oikean yläkulman `Run Python File` ajaa koodin oletusasetuksilla siitä kansiosta käsin, missä kyseinen tiedosto sijaitsee. Tämä toimii niin kauan kunnes haluat tuoda (eng. import) kirjaston sisään relatiivista moduulipolkua käyttäen, kuten `import tasks.something`. Mikäli skripti on vaikkapa kansiossa `tasks/`, koodi kaatuu `import`-komentoon, sillä moduulia `tasks/tasks/something/` ei ole olemassa. Mikäli haluat käyttää tätä, sinun pitää huolehtia, että VS Code asettaa koodin ajamisen ajaksi ympäristömuuttujan PYTHONPATH arvoksi projektikansion. Yksi tapa tehdä tämä on luoda `Run and Debug`-paneelin avulla (ruudun vasemmalla) uusi konfiguraatio, ja lisätä konfiguraatio-JSON:iin rivi `"env":{"PYTHONPATH": "${workspaceFolder}"}`.
+
 
 ## Testaa kaikki tehdyt
 
@@ -34,7 +47,7 @@ Yllä ajettu testi ajoi testifunktion (eng. test function nimeltään `test_hell
 5. Tallenna ja lisää versionhallintaan.
 6. Siirry seuraavaan tehtävään.
 
-Testi ajetaan lyhyesti ja ytimekkäästi komennolla:
+Testi (Kohta 3) ajetaan lyhyesti ja ytimekkäästi komennolla:
 ```
 pytest
 ```
