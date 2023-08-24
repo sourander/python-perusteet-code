@@ -30,9 +30,9 @@ Huomaa, että **tämän kurssin tehtävissä oletetaan**, että lisäät tyyppiv
 
 Ensimmäinen tehtävä ei varsinaisesti ole tehtävä laisinkaan. Tehtävä on tehty sinun puolesta, jotta voit testata `pytest`-kirjaston toiminnan, kuten `README.md`-tiedostossa neuvottiin. Tehtävästä voi kuitenkin ottaa mallia seuraaviin tehtäviin. Kuvitteellinen tehtävänanto olisi:
 
-> Luo moduuli `harjoitukset.helloworld`. Kirjoita moduuliin funktio `hello_world` joka palauttaa merkkijonon `"Hello World!"`. Isoilla ja pienillä kirjaimilla, kuten myös välilyönneillä sekä huutomerkillä, on merkitystä.
+> Luo moduuli `tasks.helloworld`. Kirjoita moduuliin funktio `hello_world` joka palauttaa merkkijonon `"Hello World!"`. Isoilla ja pienillä kirjaimilla, kuten myös välilyönneillä sekä huutomerkillä, on merkitystä.
 
-Vastaus on tehty jo valmiiksi, joten älä muokkaa sitä. Moduuli on tiedostossa `harjoitukset/helloworld.py`. Tiedoston sisältö on:
+Vastaus on tehty jo valmiiksi, joten älä muokkaa sitä. Moduuli on tiedostossa `tasks/helloworld.py`. Tiedoston sisältö on:
 ```python
 def hello_world() -> str:
     return "Hello World!"
@@ -54,7 +54,7 @@ Tämä osio pakottaa käyttämään muuttujia ja kontrollirakenteita.
 
 ## Tehtävä 1.1: tasks.variables
 
-Luo moduuliin `tasks.variables` (eli tiedosto `tasks/variables.py`). Aseta tiedoston sisällä seuraaville muuttujille arvot, jotka edustavat muuttajan nimessä olevaa muuttujatyyppiä:
+Luo moduuli `tasks.variables` (eli tiedosto `tasks/variables.py`). Aseta tiedoston sisällä seuraaville muuttujille arvot, jotka edustavat muuttajan nimessä olevaa muuttujatyyppiä:
 
 * my_integer
 * my_float
