@@ -52,7 +52,7 @@ FAILED tests/test_mypy.py::test_mypy - AssertionError: vastaukset\strings.py:2: 
 
 Tämä osio pakottaa käyttämään muuttujia ja kontrollirakenteita.
 
-## Tehtävä 1.1: tasks.variables
+## Tehtävä 1.1: Muuttujat
 
 Luo moduuli `tasks.variables` (eli tiedosto `tasks/variables.py`). Aseta tiedoston sisällä seuraaville muuttujille arvot, jotka edustavat muuttajan nimessä olevaa muuttujatyyppiä:
 
@@ -72,19 +72,19 @@ Luo moduuli `tasks.variables` (eli tiedosto `tasks/variables.py`). Aseta tiedost
 Tämän osion funktioita yhdistää se, että ne kaikki vaativat argumentteina vain ja ainoastaan merkkijonoja. Palautuvan arvon tyyppi riippuu tehtävästä.
 
 
-## Tehtävä 2.1: tasks.strings:generate_zip_name
+## Tehtävä 2.1: Generoi zipin nimi
 
 Luo moduuli `tasks.strings`. Tee moduulin sisälle funktio `generate_zip_name`, joka ottaa sisään neljä parametriä: applikaation nimen, version, prosessoriarkkitehtuurin sekä tiedostopäätteen. Jos kutsu on `generate_zip_name("myApp", "1.0", "x86_64", "zip")` niin takaisin tulee palautua merkkijono `"myApp-1.0-x86_64.zip"`
 
-## Tehtävä 2.2: tasks.strings:is_a_in_b
+## Tehtävä 2.2: Sisältääkö B A:n
 
 Luo aiemman tehtävän kanssa samaan moduuliin, `tasks.strings`, funktio. Funktion nimi on `is_a_in_b` ja sen parametrit ovat kaksi merkkijonoa. Funktio palauttaa Boolen muuttujan (True tai False), joka indikoi, löytyykö merkkijono a merkkijonon b sisältä. Funktion tulee käsitellä pieniä ja suuria kirjaimia keskenään samoina. Esimerkiksi kutsu `is_a_in_b("kissa", "Lemmikkini nimi on Kissa.")` palauttaa True. Myös `is_a_in_b("from taulu", "SELECT * FROM TAULU")` palauttaa True.
 
-## Tehtävä 2.2: tasks.strings:count_vowels
+## Tehtävä 2.3: tasks.strings:count_vowels
 
 Käytä yhä samaa moduulia `tasks.strings`. Luo funktio `count_vowels`, joka laskee kaikki **suomen kielen vokaalit** merkkijonosta, joka syötetään funktioon parametrina. Funktion tulee palauttaa kokonaisluku.
 
-## Tehtävä 2.3: tasks.strings:is_palindrome
+## Tehtävä 2.4: tasks.strings:is_palindrome
 
 Käytä yhä samaa moduulia `tasks.strings`. Luo moduuli `is_palindrome`. Funktio palauttaa Boolen muuttujan (True | False), joka indikoi, onko sille syötetty parametri suomen kielessä palindromi vai ei. Joitakin sääntöjä:
 

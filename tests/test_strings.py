@@ -6,8 +6,8 @@ from tests.conftest import count_type_hints
 
 @skip_if_file_missing(f"{PN}.strings", attr_name="is_a_in_b")
 def test_generate_zip_name(attr):
-    assert attr("kar hu", "Oho, KAR HU!", ) == True
-    assert attr("aaa", "bbb", ) == False
+    assert attr("kar hu", "Oho, KAR HU!") == True
+    assert attr("aaa", "bbb") == False
     assert attr("", "Non empty string") == False
     assert count_type_hints(attr) >= 3
 
