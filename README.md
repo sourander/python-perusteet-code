@@ -1,8 +1,14 @@
 # Python Perusteet
 
-Katso tehtävänannot täältä: [TEHTAVAT.md](TEHTAVAT.md)
+# JavaScript perusteet
 
-Tarvitset tehtävien tekoon Pythonin, Pip:n ja `requirements.txt`-tiedoston määrittelevät kirjastot. Pythonin asennusohje siirretään myöhemmin muualle. Väliaikainen säilö on: [ASENNUS-WIN.md](ASENNUS-WIN.md)
+Tämä kurssi on koodattu Python 3:lla. Pythonon dokumentaatio löytyy [täältä](https://docs.python.org/3/).
+
+* Tehtävät tehdään seuraamalla [tehtävänantoja](docs/TEHTAVAT.md).
+  * Kaikki tehtävät toteutetaan `tasks/`-hakemistoon.
+* Tehtävät testataan ajamalla testit. Lue ohje alta.
+
+Tehtävät kannattaa tehdä tuoreimmalla vakaalla Python 3:lla, joka on tämän kirjoitushetkellä Python 3.11.
 
 **HUOM:** Tämän ohjeen hakemistopolut ovat relatiivisia tämän projektin juureen nähden (eli siihen kansioon, jossa juuri tämä `README.md`-tiedosto sijaitsee.) Hakemistopolut on kirjoitettu POSIX-polkuja käyttäen, joten tiedostopolun hakemistojen välisenä erottimena käytetään kauttaviivaa (eng. slash, `/`). Mikäli käytät Windowsia, korvaa ne kenoviivalla (eng. backslash, `\`).
 
@@ -13,6 +19,9 @@ Tämän kurssin tehtävät voi tarkistaa itse. Tehtävät tarkistetaan Pythonin 
 ## Testaa Hello World
 
 ```sh
+# Asenna riippuvuudet
+$ pip install requirements.txt
+
 # Aja tämä komento
 $ pytest tests/test_helloworld.py::test_hello_world --verbose
 
@@ -30,8 +39,8 @@ Yllä ajettu testi ajoi testifunktion (eng. test function nimeltään `test_hell
 ## Tehtävän tekeminen
 
 1. Tehtävät on tarkoituksella aloittajalle haastavia; lue Pythonin dokumentaatiota kun teet tehtäviä, kysy neuvoa muilta, yritä ja erehdy. 
-2. Tehtävät voi tehdä millä tahansa tekstieditorilla, mutta suosittelen Visual Studio Codea.
-3. Aja kaikki tehtävät projektin juuresta eli siis kansiosta `$jotain/python-perusteet-code/`. Komentoriviesimerkki koodin ajamiseen on: `python tasks/helloworld.py`
+2. Tehtävät voi tehdä millä tahansa tekstieditorilla, mutta Visual Studio Codea on suositeltu ja tunneilla neuvottu.
+3. Aja kaikki tehtävät projektin juuresta eli siis kansiosta `.../python-perusteet-code/`. Komentoriviesimerkki koodin ajamiseen on: `python tasks/helloworld.py`
 
 > Vinkki: mikäli haluat ajaa koodin siten, että siitä jää interaktiivinen sessio käyntiin koodin suorittamisen jälkeen, lisää parametri -i, eli `python -i <polku-tiedostoon>`. Interaktiivinen sessio sulkeutuu komennolla `quit()`.
 
