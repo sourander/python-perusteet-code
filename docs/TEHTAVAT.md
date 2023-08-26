@@ -80,13 +80,13 @@ Luo moduuli `tasks.strings`. Tee moduulin sisälle funktio `generate_zip_name`, 
 
 Luo aiemman tehtävän kanssa samaan moduuliin, `tasks.strings`, funktio. Funktion nimi on `is_a_in_b` ja sen parametrit ovat kaksi merkkijonoa. Funktio palauttaa Boolen muuttujan (True tai False), joka indikoi, löytyykö merkkijono a merkkijonon b sisältä. Funktion tulee käsitellä pieniä ja suuria kirjaimia keskenään samoina. Esimerkiksi kutsu `is_a_in_b("kissa", "Lemmikkini nimi on Kissa.")` palauttaa True. Myös `is_a_in_b("from taulu", "SELECT * FROM TAULU")` palauttaa True.
 
-## Tehtävä 2.3: tasks.strings:count_vowels
+## Tehtävä 2.3: Laske vokaalit
 
 Käytä yhä samaa moduulia `tasks.strings`. Luo funktio `count_vowels`, joka laskee kaikki **suomen kielen vokaalit** merkkijonosta, joka syötetään funktioon parametrina. Funktion tulee palauttaa kokonaisluku.
 
-## Tehtävä 2.4: tasks.strings:is_palindrome
+## Tehtävä 2.4: Palindromitunnistin
 
-Käytä yhä samaa moduulia `tasks.strings`. Luo moduuli `is_palindrome`. Funktio palauttaa Boolen muuttujan (True | False), joka indikoi, onko sille syötetty parametri suomen kielessä palindromi vai ei. Joitakin sääntöjä:
+Käytä yhä samaa moduulia `tasks.strings`. Luo funktio `is_palindrome`. Funktio palauttaa Boolen muuttujan (True | False), joka indikoi, onko sille syötetty parametri suomen kielessä palindromi vai ei. Joitakin sääntöjä:
 
 1. Isot ja pienet kirjaimet tulee nähdä keskenään samoina.
 2. Erikoismerkkejä (ei-aakkosia) ei tule ottaa huomioon.
@@ -94,7 +94,13 @@ Käytä yhä samaa moduulia `tasks.strings`. Luo moduuli `is_palindrome`. Funkti
 4. Funktion ei tarvitse ottaa kantaa siihen, ovatko sanat oikeita sanoja.
 
 
+# Osio 3: Numerot
 
+Tämän osion funktioita yhdistää se, että ne kaikki vaativat argumentteina vain ja ainoastaan numeroita. Palautuvan arvon tyyppi riippuu tehtävästä.
+
+## Tehtävä 3.1: Celsius Fahrenheitiksi
+
+Luo moduuli `tasks.numbers`. Tee moduulin sisälle funktio `celsius_to_fahrenheit` joka ottaa sisään yhden parametrin. Funktio palauttaa luvun, joka on syötteen luku käännettynä Celsiuksesta Fahrenheitiksi.
 
 
 # Osio X: Tiedostot

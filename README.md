@@ -65,6 +65,15 @@ Huomaathan, että ne tehtävät, joita et ole aloittanut, sivuutetaan kokonaan: 
 
 Mikäli haluat hieman tiiviimmän tulosteen, kokeile ajaa skripti quiet-parametrilla eli `pytest -q`. Tyypillisesti tämä on default, mutta `pytest.ini` tiedostossa on asetettu `addopts = -v`. Verbosen ja quietin paremmuus riippuu hieman tilanteesta ja mahdollisesta ongelmasta. Ajoittain ongelman mahdollinen virheilmoitus on helpompi lukea verbose-tilassa.
 
+# Koodin ajaminen eri packagesta
+
+Tämä on lähinnä opettajalle hyödyllinen MEMO. Koodin voi kirjoittaa `vastaukset/` packageen, joka on `.gitignore`:ssa.
+
+```sh
+# Command Prompt
+set PACKAGE_NAME=vastaukset
+```
+
 # Tehtävän palauttaminen
 
 Kun kaikki testit menevät läpi (eli `pytest` palauttaa kaikista tehtävistä **PASSED**), on aika palauttaa tehtävä. Luo `pytest`:stä raportti. Tarvitset sitä varten pluginin `pytest-html`. 
