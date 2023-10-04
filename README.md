@@ -1,8 +1,6 @@
 # Python Perusteet
 
-# JavaScript perusteet
-
-Tämä kurssi on koodattu Python 3:lla. Pythonon dokumentaatio löytyy [täältä](https://docs.python.org/3/).
+Tämä harjoituspaketti on koodattu Python 3:lla. Pythonin dokumentaatio löytyy [täältä](https://docs.python.org/3/).
 
 * Tehtävät tehdään seuraamalla [tehtävänantoja](docs/TEHTAVAT.md).
   * Kaikki tehtävät toteutetaan `tasks/`-hakemistoon.
@@ -20,7 +18,7 @@ Tämän kurssin tehtävät voi tarkistaa itse. Tehtävät tarkistetaan Pythonin 
 
 ```sh
 # Asenna riippuvuudet
-$ pip install requirements.txt
+$ pip install -r requirements.txt
 
 # Aja tämä komento
 $ pytest tests/test_helloworld.py::test_hello_world --verbose
@@ -67,11 +65,14 @@ Mikäli haluat hieman tiiviimmän tulosteen, kokeile ajaa skripti quiet-parametr
 
 # Koodin ajaminen eri packagesta
 
-Tämä on lähinnä opettajalle hyödyllinen MEMO. Koodin voi kirjoittaa `vastaukset/` packageen, joka on `.gitignore`:ssa.
+Tämä on lähinnä opettajalle hyödyllinen MEMO. Koodin voi kirjoittaa `vastaukset/` packageen, joka on `.gitignore`:ssa, oli kansio fyysisesti tässä läsnä tai symbolic link.
 
 ```sh
 # Command Prompt
 set PACKAGE_NAME=vastaukset
+
+# Z shell
+export PACKAGE_NAME=vastaukset
 ```
 
 # Tehtävän palauttaminen
