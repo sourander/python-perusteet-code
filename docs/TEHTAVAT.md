@@ -80,6 +80,8 @@ Luo moduuli `tasks.strings`. Tee moduulin sisälle funktio `generate_zip_name`, 
 
 Luo aiemman tehtävän kanssa samaan moduuliin, `tasks.strings`, funktio. Funktion nimi on `is_a_in_b` ja sen parametrit ovat kaksi merkkijonoa. Funktio palauttaa Boolen muuttujan (True tai False), joka indikoi, löytyykö merkkijono a merkkijonon b sisältä. Funktion tulee käsitellä pieniä ja suuria kirjaimia keskenään samoina. Esimerkiksi kutsu `is_a_in_b("kissa", "Lemmikkini nimi on Kissa.")` palauttaa True. Myös `is_a_in_b("from taulu", "SELECT * FROM TAULU")` palauttaa True.
 
+Poikkeussääntö ovat tyhjät merkkijonot. Palauta False, jos joko a tai b on tyhjä merkkijono.
+
 ## Tehtävä 2.3: Laske vokaalit
 
 Käytä yhä samaa moduulia `tasks.strings`. Luo funktio `count_vowels`, joka laskee kaikki **suomen kielen vokaalit** merkkijonosta, joka syötetään funktioon parametrina. Funktion tulee palauttaa kokonaisluku.

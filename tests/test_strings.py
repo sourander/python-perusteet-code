@@ -5,7 +5,7 @@ from tests.conftest import count_type_hints
 
 
 @skip_if_file_missing(f"{PN}.strings", attr_name="is_a_in_b")
-def test_generate_zip_name(attr):
+def test_is_a_in_b(attr):
     assert attr("kar hu", "Oho, KAR HU!") == True
     assert attr("aaa", "bbb") == False
     assert attr("", "Non empty string") == False
@@ -30,6 +30,7 @@ def test_is_palindrome(attr):
     assert attr("") == False
     assert attr("!!!!!") == False
     assert attr("ÖäÖ") == True
+    assert attr("vääräv") == False
     assert attr("Ope, hikkaako kaakkihepo?!") == True
     assert attr("Ei hikkaa!") == False
     assert count_type_hints(attr) >= 2
