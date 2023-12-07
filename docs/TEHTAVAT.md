@@ -104,6 +104,18 @@ Tämän osion funktioita yhdistää se, että ne kaikki vaativat argumentteina v
 
 Luo moduuli `tasks.numbers`. Tee moduulin sisälle funktio `celsius_to_fahrenheit` joka ottaa sisään yhden parametrin. Funktio palauttaa luvun, joka on syötteen luku käännettynä Celsiuksesta Fahrenheitiksi.
 
+## Tehtävä 3.2: Collatzin konjektuuri
+
+> Collatzin konjektuurin mukaan tietynlaiset lukujonot päättyvät aina samalla tavalla, riippumatta mistä luvusta kyseinen lukusarja aloitetaan. Mielivaltaiselle positiiviselle kokonaisluvulle suoritetaan seuraava toimenpide:
+> 
+> Jos luku on parillinen, jaetaan se kahdella
+> 
+> Jos luku on pariton, kerrotaan se kolmella ja lisätään yksi.
+>
+> - Wikipedia
+
+Yllä esitellään Collatzin konjektuuri. Tehtäväsi on luoda funktio `collatz`, joka ottaa sisään yhden parametrin. Parametrin tulee olla positiivinen kokonaisluku. Funktio palauttaa listan, joka sisältää kaikki luvut, jotka ovat osa Collatzin konjektuuria. Esimerkiksi kutsu `collatz(5)` palauttaa listan `[5, 16, 8, 4, 2, 1]`. Mikäli annettu parametri ei ole kokonaisluku, tulee funktion palauttaa tyhjä lista.
+
 
 # Osio X: Tiedostot
 
