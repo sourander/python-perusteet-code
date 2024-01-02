@@ -104,7 +104,19 @@ Tämän osion funktioita yhdistää se, että ne kaikki vaativat argumentteina v
 
 Luo moduuli `tasks.numbers`. Tee moduulin sisälle funktio `celsius_to_fahrenheit` joka ottaa sisään yhden parametrin. Funktio palauttaa luvun, joka on syötteen luku käännettynä Celsiuksesta Fahrenheitiksi.
 
-## Tehtävä 3.2: Collatzin konjektuuri
+## Tehtävä 3.2: Jaollinen numeroilla
+
+Käytä samaa moduulia `tasks.numbers`. Tee moduulin sisälle funktio `divisible_with_all`, joka ottaa sisään 2 tai useamman parametrin. Funktio palauttaa Boolen muuttujan (true | false) sen perusteella, onko ensimmäinen annettu luku jaollinen kaikilla muilla luvuilla. Kaikkien parametrien tulee olla konaislukuja; muutoin funktion tulee nostaa virheilmoitus.
+
+Esimerkkejä:
+
+> divisible_with_all(10, 1, 2, 5) => palauttaa True, koska 10 on jaollinen 1:llä, 2:lla ja 5:llä.
+>
+> divisible_with_all(10, 6) => palauttaa False, koska 10 ei ole jaollinen 6:lla.
+> 
+> divisible_with_all(10, 1.3) => nostaa virheilmoituksen
+
+## Tehtävä 3.3: Collatzin konjektuuri
 
 > Collatzin konjektuurin mukaan tietynlaiset lukujonot päättyvät aina samalla tavalla, riippumatta mistä luvusta kyseinen lukusarja aloitetaan. Mielivaltaiselle positiiviselle kokonaisluvulle suoritetaan seuraava toimenpide:
 > 

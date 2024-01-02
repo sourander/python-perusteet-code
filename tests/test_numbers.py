@@ -1,3 +1,5 @@
+import pytest
+
 from tests.conftest import skip_if_file_missing
 from tests.conftest import PACKAGE_NAME as PN
 from tests.conftest import count_type_hints
@@ -10,6 +12,18 @@ def test_celsius_to_fahrenheit(attr):
     assert attr(-40) == -40
     assert attr(37) == 98.6
     assert count_type_hints(attr) >= 2
+
+@skip_if_file_missing(f"{PN}.numbers", attr_name="divisible_with_all")
+def test_divisible_with_all(attr):
+    assert attr(10, 2, 5) == True
+    assert attr(10, 2, 3) == False
+    assert attr(10, 3, 5) == False
+    assert attr(10, 1, 10) == True
+
+@skip_if_file_missing(f"{PN}.numbers", attr_name="divisible_with_all")
+def test_divisible_with_all_raises(attr):
+    with pytest.raises(TypeError) as excinfo:  
+        attr(1, 1, "kissa", 4)
 
 @skip_if_file_missing(f"{PN}.numbers", attr_name="collatz")
 def test_collatz(attr):
